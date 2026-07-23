@@ -329,8 +329,6 @@ namespace Phillip_Menu_Temp
             }
         }
 
-        // This comment is a test to see if my code works!
-
         void CreateMenu()
         {
             isMenuCreated = true;
