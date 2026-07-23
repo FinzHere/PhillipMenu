@@ -24,6 +24,8 @@ namespace Phillip_Menu_Temp.Mods
         private static float _nextUpdateTime = 0f;
         private static bool _boardsCacheInit = false;
 
+        private static bool mapInfoBigger = false;
+
         private static void InitBoardsCache()
         {
             if (_boardsCacheInit) return;
@@ -89,7 +91,7 @@ namespace Phillip_Menu_Temp.Mods
                     string playerName = PhotonNetwork.LocalPlayer.NickName;
                     string room = PhotonNetwork.InRoom ? PhotonNetwork.CurrentRoom.Name : "Not In Room";
                     int players = PhotonNetwork.InRoom ? PhotonNetwork.CurrentRoom.PlayerCount : 0;
-                    motdBody.text = "=========================================================================\nName: " + playerName + "\nRoom: " + room + "\nPlayers: " + players + "\nStatus: <#00FF00>Undetected</color>\n=========================================================================";
+                    motdBody.text = "=========================================================================\nName: " + playerName + "\nRoom: " + room + "\nPlayers: " + players + "\nStatus: <#00FF00>Undetected</color>\n=========================================================================\n\nFor the latest updates, check the <#00FF00>GitHub repo!</color>\n<#00FF00>GITHUB: </color>https://github.com/FinzHere/PhillipMenu\n<#0000FF>DISCORD: </color>There isn't one yet :(";
                 }
             }
             catch { }
@@ -105,7 +107,7 @@ namespace Phillip_Menu_Temp.Mods
                 {
                     cocBody.richText = true;
                     cocBody.fontStyle = FontStyles.Bold;
-                    cocBody.text = "==============================================\n\nHello! Welcome to <#5714C4>Phillip Menu</color> !\n<#5714C4>Phillip Menu</color> is a <#00FF00>FREE</color> and <#00FF00>SIMPLE</color> Gorilla Tag Mod Menu .\nThis is a beginner project, so don't expect <#FF0000>big, fancy mods</color>, but rather <#00FF00>mastery</color> of the <#5714C4>very basics</color> .\n<#5714C4>With that being said, please enjoy using Phillip Menu !</color>\n\n==============================================";
+                    cocBody.text = "=========================================\n\nHello! Welcome to <#00FF00>Phillip Menu</color> !\n<#00FF00>Phillip Menu</color> is a <#00FF00>FREE</color> and <#00FF00>SIMPLE</color> Gorilla Tag Mod Menu .\nThis is a beginner project, so don't expect <#FF0000>big, fancy mods</color>, but rather <#00FF00>mastery</color> of the <#00FF00>very basics</color> .\n<#00FF00>With that being said, please enjoy using Phillip Menu !</color>\n\n=========================================";
                 }
             }
             catch { }

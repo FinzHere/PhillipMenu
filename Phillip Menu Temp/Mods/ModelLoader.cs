@@ -75,10 +75,10 @@ public static class ModelLoader
 
                 // 8. Position resetting
                 currentSpawnedModel.transform.localPosition = new Vector3(0.3f, -0.15f, 0.11f);
-                currentSpawnedModel.transform.localRotation = Quaternion.identity;
+                currentSpawnedModel.transform.localRotation = Quaternion.Euler(90f, 90f, 90f);
 
                 // Use custom scale if provided, otherwise fallback to your default 0.1f
-                currentSpawnedModel.transform.localScale = customScale ?? new Vector3(0.3f, 0.3f, 0.3f);
+                currentSpawnedModel.transform.localScale = customScale ?? new Vector3(0.2f, 0.2f, 0.2f);
 
                 // 9. Free unmanaged memory
                 bundle.Unload(false);

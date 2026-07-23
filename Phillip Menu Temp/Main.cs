@@ -262,6 +262,7 @@ namespace Phillip_Menu_Temp
             debug.buttons.Add(new ButtonData { buttonText = "Lobby Stats", method = DebugMods.ConnectedLobbyCode, isToggleable = false, isToggled = false });
             debug.buttons.Add(new ButtonData { buttonText = "Active Colliders", method = DebugMods.ActiveColliders, isToggleable = false, isToggled = false });
             debug.buttons.Add(new ButtonData { buttonText = "Current Gravity", method = DebugMods.CurrentGrav, isToggleable = false, isToggled = false });
+            debug.buttons.Add(new ButtonData { buttonText = "Show Hand Axis", method = () => DebugMods.ShowHandAxis(), offMethod = () => DebugMods.ShowHandAxisOff(), isToggleable = true, isToggled = false });
             allPages.Add(debug);
 
             // Example of registering a Constant Button:
@@ -350,12 +351,12 @@ namespace Phillip_Menu_Temp
             titleObj.transform.SetParent(menuObj.transform, false);
 
             // Using your exact depth (X), centered (Y), and top height (Z) offset
-            titleObj.transform.localPosition = new Vector3(0.501f, 0f, 0.31f);
+            titleObj.transform.localPosition = new Vector3(0.501f, 0f, 0.45f);
 
             // Match the rotation and scale used by your button labels
             titleObj.transform.localRotation = Quaternion.Euler(0f, -90f, -90f);
             // The smaller Y value (0.01f) stops the vertical stretching!
-            titleObj.transform.localScale = new Vector3(0.015f, 0.01f, 0.05f);
+            titleObj.transform.localScale = new Vector3(0.015f, 0.02f, 0.05f);
 
             titleText = titleObj.AddComponent<TextMeshPro>();
             titleText.fontSize = 35;

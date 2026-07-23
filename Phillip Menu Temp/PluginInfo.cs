@@ -9,6 +9,6 @@ namespace Phillip_Menu_Temp
         public const string description = "This is a very simple, very unoptimised mod menu created WITHOUT a template!";
         public const string GUID = "Phillip.Simple.Menu";
         public const string name = "Phillip Menu";
-        public const string version = "0.1.17";
+        public const string version = "0.1.19";
     }
 }

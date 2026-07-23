@@ -72,5 +72,82 @@ namespace Phillip_Menu_Temp.Mods
 
             Debug.Log($"[PhillipMenu] Current Gravity: {currentGrav.y}");
         }
+
+        public static GameObject xAxis, yAxis, zAxis;
+        public static Vector3 axisScale = new Vector3(0.1f, 0.1f, 0.1f);
+        
+        public static void ShowHandAxis()
+        {
+            if (GTPlayer.Instance == null) return;
+
+            Transform handTarget = GTPlayer.Instance.RightHand.controllerTransform;
+
+            // X Axis
+            if (xAxis == null)
+            {
+                xAxis = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                xAxis.transform.SetParent(handTarget, false);
+                xAxis.transform.localRotation = Quaternion.identity;
+                xAxis.transform.localScale = axisScale;
+                xAxis.transform.localPosition = new Vector3(0.15f, 0f, 0f);
+
+                UnityEngine.Object.Destroy(xAxis.GetComponent<Collider>());
+
+                var xRend = xAxis.GetComponent<Renderer>();
+                xRend.material.shader = Shader.Find("GorillaTag/UberShader");
+                xRend.material.color = Color.red;
+            }
+
+            if (yAxis == null)
+            {
+                yAxis = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                yAxis.transform.SetParent(handTarget, false);
+                yAxis.transform.localRotation = Quaternion.identity;
+                yAxis.transform.localScale = axisScale;
+                yAxis.transform.localPosition = new Vector3(0f, 0.15f, 0f);
+
+                UnityEngine.Object.Destroy(yAxis.GetComponent<Collider>());
+
+                var yRend = yAxis.GetComponent<Renderer>();
+                yRend.material.shader = Shader.Find("GorillaTag/UberShader");
+                yRend.material.color = Color.green;
+            }
+
+            if (zAxis == null)
+            {
+                zAxis = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                zAxis.transform.SetParent(handTarget, false);
+                zAxis.transform.localRotation = Quaternion.identity;
+                zAxis.transform.localScale = axisScale;
+                zAxis.transform.localPosition = new Vector3(0f, 0f, 0.15f);
+
+                UnityEngine.Object.Destroy(zAxis.GetComponent<Collider>());
+
+                var zRend = zAxis.GetComponent<Renderer>();
+                zRend.material.shader = Shader.Find("GorillaTag/UberShader");
+                zRend.material.color = Color.blue;
+            }
+        }
+
+        public static void ShowHandAxisOff()
+        {
+            if (xAxis != null)
+            {
+                GameObject.Destroy(xAxis);
+                xAxis = null;
+            }
+
+            if (yAxis != null)
+            {
+                GameObject.Destroy(yAxis);
+                yAxis = null;
+            }
+
+            if (zAxis != null)
+            {
+                GameObject.Destroy(zAxis);
+                zAxis = null;
+            }
+        }
     }
 }
