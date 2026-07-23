@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PhillipMenu")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+451d26f357806ba3815d34f5e96faf288b2d1973")]
 [assembly: System.Reflection.AssemblyProductAttribute("PhillipMenu")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PhillipMenu")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
