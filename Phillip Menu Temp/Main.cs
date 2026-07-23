@@ -329,6 +329,8 @@ namespace Phillip_Menu_Temp
             }
         }
 
+        // random comment
+
         void CreateMenu()
         {
             isMenuCreated = true;
