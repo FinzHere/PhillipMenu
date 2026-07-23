@@ -275,7 +275,7 @@ namespace Phillip_Menu_Temp.Mods
                     break;
 
                 case 3:
-                    gravAmount = 9.78f;
+                    gravAmount = 9.8f;
                     break;
             }
         }
